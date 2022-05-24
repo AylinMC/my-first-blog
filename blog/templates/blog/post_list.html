@@ -8,10 +8,12 @@
       <h1><a href="/">Leidy's Blog</a></h1>
     </div>
 
-    <div>
-      <p>Published: 23.05.2022,  17:44</p>
-      <h2><a href="">Mi Primer Post</a></h2>
-      <p>Aiofhvuhifjfeirufhfuerfeurfheruhfeurgfheughweiuwuhughuihuivhuhruighriugvjnriunhv</p>
-    </div>
+    {% for post in posts%}
+      <div>
+        <p> publicado: {{ post.fecha_publicacion}}</p>
+        <h2><a href="">{{ post.titulo }}</a> </h2>
+        <p>{{ post.texto|linebreaksbr }}</p>
+      </div>
+    {%endfor%}
   </body>
 </html>
